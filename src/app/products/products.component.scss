@@ -1,0 +1,27 @@
+.eratoProducts{
+    height: 100vh;
+}
+
+h2{
+    margin: 100px 0 60px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+p{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #858585;
+}
+.productsContainer{
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 360px));
+    justify-content: space-between;
+    grid-column-gap: 1em;
+    grid-row-gap: 4em;
+}

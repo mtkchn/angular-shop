@@ -1,0 +1,115 @@
+.cart:hover {
+  #cartIcon {
+    fill: rgb(255, 0, 0);
+    cursor: pointer;
+  }
+}
+
+.cartContainer {
+  position: absolute;
+  width: 500px;
+  max-height: 660px;
+  background-color: #fff;
+  top: 105%;
+  right: -190px;
+  border: 1px solid #ccc;
+}
+
+.cartHeader,
+.cartFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  
+  color: #000;
+  border-bottom: 1px solid #ccc;
+  font-family: "robotoBlack", sans-serif;
+  font-weight: bold;
+}
+.cartItems {
+  max-height: 500px;
+  overflow-y: scroll;
+  background-color: #eceff1;
+}
+
+.cartItems::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cartItems::-webkit-scrollbar-thumb {
+  border-width: 1px 1px 1px 2px;
+  border-color: rgb(146, 143, 143);
+  background-color: #aaa;
+}
+
+.cartItems::-webkit-scrollbar-thumb:hover {
+  border-width: 1px 1px 1px 2px;
+  border-color: #555;
+  background-color: #777;
+}
+
+.cartItems::-webkit-scrollbar-track {
+  border-width: 0;
+}
+.cartItems::-webkit-scrollbar-track:hover {
+  border-left: solid 1px #aaa;
+  background-color: #eee;
+}
+
+.emptycart{
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #000;
+  font-family: "robotoBlack", sans-serif;
+  font-weight: bold;
+}
+.cart {
+  margin-left: 20px;
+}
+#cartIcon {
+  width: 34px;
+  height: 34px;
+  fill: #ffffff;
+
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
+
+  img {
+    width: 100%;
+  }
+}
+.counter {
+  background-color: #ff5a00;
+  border-radius: 8px;
+  box-sizing: content-box;
+  color: #fff;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  min-width: 8px;
+  padding: 0 4px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: calc(100% - 16px);
+}
+
+.counterParant {
+  position: relative;
+}
+
+
+.cartFooter{
+  border-top: 1px solid #ccc;
+  border-bottom: none;
+}

@@ -1,0 +1,22 @@
+<mat-card class="product" [ngStyle]="{'background-image':'url(' + product.img + ')'}" >
+  <mat-card-content class="card-content">
+      <div class="aboutProduct">
+          <h3 class="productName" >{{product.title}}</h3>
+          <p class="productDecription">{{product.text}}</p>
+      </div>
+    <mat-divider></mat-divider>
+    <div class="infoContainer">
+      <span class="price" >{{product.price | currency:'USD'}}</span>
+      <div class="buttons">
+          <button mat-mini-fab class="btnColor">
+              <mat-icon>favorite</mat-icon>
+            </button>
+          <button mat-mini-fab class="btnColor" (click)="this.cartService.addTocart(product)">
+              <mat-icon>shopping_cart </mat-icon>
+            </button>
+      </div>
+      
+    </div>
+    
+  </mat-card-content>
+</mat-card>

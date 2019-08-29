@@ -1,0 +1,52 @@
+.sliderContent {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .imgLauout{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center -22px;
+    background-size: cover;
+    filter: brightness(.6);
+  }
+  
+  .info{
+    z-index: 222;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  .title {
+    margin-top: 310px;
+    z-index: 3;
+    font-size: 48px;
+    font-weight: bold;
+  }
+  .sliderText {
+    margin: 45px 0;
+    font-size: 20px;
+  }
+  
+  .btn {
+    display: flex;
+    cursor: pointer;
+  }
+  
+  .buyBtn {
+    margin: 0 auto;
+    padding: 20px 60px;
+    background-color: #ff4000;
+    border-radius: 30px;
+    font-weight: 600;
+  }
+  .buyBtn:hover {
+    background-color: red;
+  }
