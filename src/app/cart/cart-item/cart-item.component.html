@@ -1,0 +1,20 @@
+<div class="itemContainer">
+  <div class="item-img" [ngStyle]="{'background-image':'url(' + item.img + ')'}"></div>
+
+
+
+  <div class="itemTitle">{{item.title}}<div class="itemText">{{item.materials}}</div>
+  </div>
+
+
+  <div class="itemControllBar">
+    <mat-icon class="quantityControllBtn" (click)="this.cartService.removeQuantity(this.item)">remove_circle_outline
+    </mat-icon>
+    <div class="itemQuantity" *ngIf="item.quantity">{{item.quantity}}</div>
+    <mat-icon class="quantityControllBtn" (click)="this.cartService.addTocart(this.item)">add_circle_outline</mat-icon>
+    <span class="itemPrice">{{item.quantity * item.price}}</span>
+    <mat-icon class="quantityControllBtn" (click)="this.cartService.deleteFromCart(this.item)">delete</mat-icon>
+  </div>
+
+
+</div>

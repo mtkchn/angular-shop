@@ -1,0 +1,29 @@
+.productPage {
+    padding-top: 65px;
+}
+
+.wrapper {
+    display: flex;
+    padding-top: 30px;
+}
+
+.imgContainer {
+    width: 480px;
+    height: 720px;
+    background-repeat: no-repeat;
+    background-position: center -22px;
+    background-size: cover;
+}
+
+.info {
+    box-sizing: border-box;
+    margin: 0 50px;
+    padding-top: 10px;
+    max-width: 40vw;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}

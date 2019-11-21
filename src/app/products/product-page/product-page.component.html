@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="wrapper">
+    <div class="imgContainer" [ngStyle]="{'background-image':'url(' + this.service.productToShow.img + ')'}"></div>
+    <div class="info">
+      <h1>{{this.service.productToShow.title}}</h1>
+      <p>{{this.service.productToShow.materials}}</p>
+      <span>{{this.service.productToShow.price}}</span>
+      <p>{{this.service.productToShow.text}}</p>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,26 @@
+<mat-card class="product" [ngStyle]="{'background-image':'url(' + product.img + ')'}">
+  <mat-card-content class="card-content">
+    <div class="aboutProduct">
+      <h3 class="productName">{{product.title}}</h3>
+      <p class="productDecription overflow-visible">{{product.text}}</p>
+      <div class="gradient"></div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="infoContainer">
+      <span class="price">{{product.price | currency:'USD'}}</span>
+      <div class="buttons">
+        <a routerLink="product">
+          <button mat-stroked-button class="btn" (click)="this.productsService.showProduct(product)">
+            Подробнее
+          </button>
+        </a>
+        <button mat-mini-fab class="btnColor" (click)="this.cartService.addTocart(product); this.createComponent()">
+          <mat-icon>shopping_cart </mat-icon>
+        </button>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+<div class="notifyContainer">
+  <ng-template class="notify" #viewContainerRef></ng-template>
+</div>

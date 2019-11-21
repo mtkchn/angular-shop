@@ -1,0 +1,11 @@
+<div class="sliderContent" [class.active]="slide === service.activeSlide" [@right]="slide.animationState">
+  <div class="imgLauout" [ngStyle]="{'background-image':'url(' + slide.img + ')'}">
+  </div>
+  <div class="info">
+    <h1 class="title sliderTItle">{{slide.title}}</h1>
+    <h3 class="sliderText">{{slide.text}}</h3>
+    <div class="btn">
+      <div class="buyBtn"><span>Купить белье</span></div>
+    </div>
+  </div>
+</div>
