@@ -1,0 +1,30 @@
+<mat-card class="formCard">
+  <form class="form" (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <div class="form-fields" *ngIf="this.item">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Title" name="title" [ngModel]="this.item.title">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Description" name="description" [ngModel]="this.item.description">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Materials" name="materials" [ngModel]="this.item.materials">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Price" name="price" [ngModel]="this.item.price">
+      </mat-form-field>
+    </div>
+
+    <button mat-flat-button color="primary" type="submit">Save</button>
+    <button mat-flat-button color="warn" routerLink="/admin">Close</button>
+
+  </form>
+</mat-card>
+
+
+<!-- <mat-form-field class="full-width">
+      <input matInput placeholder="Title" name="title" ngModel>
+    </mat-form-field> -->

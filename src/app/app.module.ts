@@ -20,7 +20,24 @@ import { NotificationComponent } from './notification/notification.component';
 import { ProductPageComponent } from './products/product-page/product-page.component';
 import { ProductsService } from './products/products.service';
 import { CartPageComponent } from './cart-page/cart-page.component';
-
+import { NotificationModule } from './notifications/notification.module';
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { FormsModule } from '@angular/forms';
+import { DbService } from './dbService';
+import { AngularFireStorage } from 'angularfire2/storage';
+import { AdminModuleModule } from './admin-page/admin-module.module';
+import { EditItemComponent } from './admin-page/edit-item/edit-item.component';
+import { CartDialogComponent } from './cart/cart-dialog/cart-dialog.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AuthService } from './auth.service';
+import { AuthGuard } from './auth-guard.service';
+import { AuthComponent } from './auth/auth.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
+// import { DynamicModalPageModule } from "./dynamicModalPage/dynamicModalPage.module";
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,17 +52,30 @@ import { CartPageComponent } from './cart-page/cart-page.component';
     ProductComponent,
     NotificationComponent,
     ProductPageComponent,
-    CartPageComponent
+    CartPageComponent,
+    EditItemComponent,
+    CartDialogComponent,
+    PageNotFoundComponent,
+    AuthComponent,
+    RegisterComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    NotificationModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    FormsModule,
+    AdminModuleModule,
+    ReactiveFormsModule
   ],
-  providers: [CartService, ProductsService],
+  providers: [CartService, ProductsService, DbService, AngularFireStorage, AuthService, AuthGuard],
   bootstrap: [AppComponent],
-  entryComponents: [NotificationComponent]
+  entryComponents: [NotificationComponent, CartDialogComponent]
 })
 export class AppModule { }

@@ -1,0 +1,21 @@
+<ng-container>
+  <mat-card class="productCard" [routerLink]=[product.key] *ngFor="let product of this.products">
+    <mat-list class="itemContainer">
+      <div class="content">
+        <div class="imgContainer">
+          <img [src]="product.imgUrl" alt="productImg">
+        </div>
+        <div class="textContainer">
+          <h3 class="itemTitle">{{product.title}}</h3>
+          <span class="itemPrice">{{product.price | currency:'USD'}}</span>
+        </div>
+      </div>
+      <div class="buttonsContainer">
+        <button mat-icon-button>
+          <mat-icon (click)="deleteUser(product)">delete</mat-icon>
+        </button>
+
+      </div>
+    </mat-list>
+  </mat-card>
+</ng-container>

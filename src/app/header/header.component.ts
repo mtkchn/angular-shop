@@ -5,32 +5,6 @@ import { Router } from '@angular/router';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  animations: [
-    trigger('headerState', [
-      state('top', style({
-        height: '105px',
-      })),
-
-      state('scrolledPage', style({
-        height: '65px',
-        backgroundColor: '#000'
-      })),
-      transition('top <=> scrolledPage', animate(500))
-    ]),
-
-    trigger('imgStatus', [
-      state('top', style({
-        width: '150px',
-      })),
-
-      state('scrolledPage', style({
-        width: '60px',
-      })),
-
-
-
-    ])
-  ]
 })
 export class HeaderComponent implements OnInit {
   bagActive = false;

@@ -1,0 +1,71 @@
+<mat-card class="formCard">
+
+  <form (ngSubmit)="onSubmit()" class="productForm" #form="ngForm">
+
+
+    <mat-form-field>
+      <input matInput required type="text" placeholder="Add title" [(ngModel)]="this.db.product.title" name="title">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput required type="text" placeholder="Add description" [(ngModel)]="this.db.product.description"
+        name="description">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput required type="text" placeholder="Add materials description"
+        [(ngModel)]="this.db.product.materials" name="materials">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput required type="number" step="50" placeholder="Add price" [(ngModel)]="this.db.product.price"
+        name="price">
+    </mat-form-field>
+    <div class="dropzone" appDropzone (hovered)="toggleHover($event)" (dropped)="onDrop($event)"
+      [class.hovering]="isHovering">
+      <mat-icon>image</mat-icon>
+      <h3>Drop image here </h3>
+      <span>or</span>
+      <div class="fileInput">
+        <div class="form-group">
+          <input required type="file" name="file" id="file" class="input-file" (change)="fileEvent($event)">
+          <label for="file" class="btn btn-tertiary js-labelFile">
+            <i>
+              <mat-icon aria-hidden="false" aria-label="Example home icon">add_photo_alternate</mat-icon>
+            </i>
+            <span class="js-fileName">Choose a file</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="previewContainer" *ngIf="this.db.product.file.length !=0">
+      <img src="" id="imgPreview" #preview alt="preview">
+    </div>
+    <button mat-raised-button type="submit" class="submitButton" name="submit" [disabled]="!form.valid"
+      [disabled]="this.db.percentage | async">Upload
+      <mat-progress-bar mode="determinate" *ngIf="this.db.percentage | async as pct" [value]="pct" max="100">
+        <span>
+          {{pct | number}}%
+        </span></mat-progress-bar></button>
+  </form>
+</mat-card>
+
+
+<div *ngFor="let file of files">
+  <app-upload-task [file]="file"></app-upload-task>
+</div>
+
+<div *ngIf="snapshot | async as snap">
+
+  {{ snap.bytesTransferred }} of {{ snap.totalBytes }}
+
+  <div *ngIf="downloadURL as url">
+    <h3>Results!</h3>
+    <img [src]="url"><br>
+    <a [href]="url" target="_blank" rel="noopener">Download Me!</a>
+  </div>
+
+  <button (click)="task.pause()" [disabled]="!isActive(snap)">Pause</button>
+  <button (click)="task.cancel()" [disabled]="!isActive(snap)">Cancel</button>
+  <button (click)="task.resume()" [disabled]="!(snap?.state === 'paused')">Resume</button>
+</div>
+
+<!-- <input type="file" placeholder="Product name" (change)="onFileSelected($event)">
+    <button mat-button (click)="onUpload()">Upload</button> -->

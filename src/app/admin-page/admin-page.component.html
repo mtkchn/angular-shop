@@ -1,0 +1,12 @@
+<mat-drawer-container class="main-container">
+  <mat-drawer mode="side" opened class="drawer-nav">
+    <nav><button mat-button [routerLink]="['new']">Add product</button></nav>
+  </mat-drawer>
+  <mat-drawer-content class="drawer-content">
+    <div class="productsContainer">
+      <app-products-list class="productsListContainer"></app-products-list>
+      <mat-divider class="divider" [vertical]="true"></mat-divider>
+      <router-outlet class="controllContainer"></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

@@ -1,19 +1,9 @@
-<section class="eratoProducts">
+<section class="products">
   <div class="container">
-    <h2>Заголовок раздела с товарами</h2>
-    <p>«ЭРАТО» – это белье созданное в честь музы любовных песен Эрато (др.-греч. Еρατώ).
-      Человеку Эрато открывает силу любви, дарующей крылья и позволяющей пройти любые испытания.
-      <br>
-      -
-      <br>
-      В белье «ЭРАТО» любая женщина будет чувствовать себя любимой и желанной. </p>
+    <h2>Title</h2>
     <div class="productsContainer">
-      <app-product *ngFor="let product of this.service.products" [product]="product"></app-product>
+      <app-product *ngFor="let product of this.products; let i = index;" [product]="product">
+      </app-product>
     </div>
-
-
-    <!-- <app-notification *ngIf="this.service.notificationShow"></app-notification> -->
-
   </div>
-
 </section>

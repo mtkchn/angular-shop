@@ -1,0 +1,19 @@
+<div class="cartContainer">
+  <div class="cartHeader">
+    <h1 mat-dialog-title>SHOPPING BAG</h1> <!--  id="cartTitle"-->
+    <span>SUBTOTAL :
+      <span id="summary"> {{this.cartService.calculateOrderPrice()}}$</span>
+    </span>
+
+  </div>
+  <div class="cartItems">
+    <div class="emptycart" *ngIf="this.cartService.cart.length === 0">Your Shopping Bag is empty</div>
+    <app-cart-item *ngFor="let item of this.cartService.cart" [item]="item"></app-cart-item>
+  </div>
+  <div class="cartFooter">
+    <a routerLink="cart"><button mat-raised-button class="btn" (click)="onNoClick()">View Shopping Bag</button></a>
+    <button mat-raised-button class="btn" routerLink="/createorder"
+      (click)="this.cartService.sumCalculation()">Checkout</button>
+  </div>
+
+</div>

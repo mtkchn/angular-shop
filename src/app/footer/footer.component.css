@@ -1,20 +1,27 @@
 footer {
-    background-color: red;
-    bottom: 0;
-    z-index: 777;
-    position: fixed;
-    width: 100%;
-    height: 30px;
-    font-family: "Roboto", sans-serif;
-    color: #fff;
+  background-color: #000;
+  color: #fff;
+  bottom: 0;
+  z-index: 777;
+  position: fixed;
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+
 }
 
-mat-icon {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    cursor: pointer;
+.container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#adminLink {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
 }
