@@ -13,7 +13,7 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class ProductsListComponent implements OnInit {
   @Input() recipeId: number;
-  private products: Product[];
+  products: Product[];
 
 
   constructor(

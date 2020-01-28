@@ -12,36 +12,8 @@ export class ProductComponent {
   @Input() product;
 
   constructor(
-    private cartService: CartService,
-    private productsService: ProductsService,
-    private notificationManager: NotificationManager) { }
-
-  // ngOnInit(): void {
-  //   this.notificationManager.init(this.notificationBlock);
-  // }
-
-  // public showToast(header: string, description: string) {
-  //   this.notificationManager.showToast(header, description, 17000);
-  // }
-
-
-  // to store references of dynamically created components
-
-  // createComponent() {
-  //   console.log('CreatingNotofication', this.CFR);
-
-  //   let componentFactory = this.CFR.resolveComponentFactory(NotificationComponent);
-  //   let componentRef: ComponentRef<NotificationComponent> = this.VCR.createComponent(componentFactory);
-  //   let currentComponent = componentRef.instance;
-
-  //   currentComponent.selfRef = currentComponent;
-  //   currentComponent.index = ++this.index;
-
-  //   // add reference for newly created component
-  //   this.componentsReferences.push(componentRef);
-  // }
-
-
-
+    public cartService: CartService,
+    public productsService: ProductsService,
+    public notificationManager: NotificationManager) { }
 }
 

@@ -16,7 +16,7 @@ export interface DialogData {
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  constructor(private cartService: CartService, public dialog: MatDialog) { }
+  constructor(public cartService: CartService, public dialog: MatDialog) { }
 
   ngOnInit() {
     localStorage.setItem('myCat', 'Tom');

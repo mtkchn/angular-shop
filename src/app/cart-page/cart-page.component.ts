@@ -7,7 +7,7 @@ import { CartService } from '../cart/cart.service';
   styleUrls: ['./cart-page.component.css']
 })
 export class CartPageComponent implements OnInit {
-  constructor(private cartService: CartService) { }
+  constructor(public cartService: CartService) { }
   ngOnInit() {
   }
 

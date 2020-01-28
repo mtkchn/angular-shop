@@ -16,7 +16,7 @@ export class CartDialogComponent implements OnInit {
 
   constructor(
     public dialogRef: MatDialogRef<CartDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData, private cartService: CartService) { }
+    @Inject(MAT_DIALOG_DATA) public data: DialogData, public cartService: CartService) { }
 
   onNoClick(): void {
     this.dialogRef.close();

@@ -13,7 +13,7 @@ import { map, switchMap } from 'rxjs/operators';
   styleUrls: ['./edit-item.component.css']
 })
 export class EditItemComponent implements OnInit {
-  private item: Product;
+  public item: Product;
   constructor(
     private route: ActivatedRoute,
     private ps: ProductsService,

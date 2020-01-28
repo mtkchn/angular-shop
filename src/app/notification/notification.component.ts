@@ -11,7 +11,7 @@ export class NotificationComponent implements OnInit {
   public index: number;
   public selfRef: NotificationComponent;
 
-  constructor(private productsService: ProductsService) { }
+  constructor(public productsService: ProductsService) { }
 
   ngOnInit() {
   }

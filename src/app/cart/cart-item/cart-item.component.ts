@@ -9,7 +9,7 @@ export class CartItemComponent implements OnInit, OnChanges {
   @Input() item: any;
   totalItemPrice: number;
 
-  constructor(private cartService: CartService) { }
+  constructor(public cartService: CartService) { }
 
   ngOnChanges() {
     this.totalItemPrice = this.item.price * this.item.quantity;

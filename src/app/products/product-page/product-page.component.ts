@@ -12,7 +12,7 @@ import { CartService } from 'src/app/cart/cart.service';
   styleUrls: ['./product-page.component.css']
 })
 export class ProductPageComponent implements OnInit {
-  private item$: Observable<Product>;
+  public item$: Observable<Product>;
 
   constructor(private ps: ProductsService, private cartService: CartService, private router: ActivatedRoute) { }
 
