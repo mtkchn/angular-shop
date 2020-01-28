@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../models/product';
-import { Cookie } from 'ng2-cookies/ng2-cookies';
 import { ProductsService } from '../products/products.service';
-import { CartItem } from '../models/cart.item';
 
 @Injectable()
 export class CartService {
@@ -17,29 +15,22 @@ export class CartService {
     }
 
     getCartData() {
-        // localStorage.removeItem('cart');
         return JSON.parse(localStorage.getItem('cart'));
     }
-    // Записываем данные в LocalStorage
+
     setCartData() {
         localStorage.setItem('cart', JSON.stringify(this.cart));
-        console.log('Zapisyvajem Cookies!!!');
-
     }
 
     addTocart(product: Product) {
-        console.log('adding to cart!!');
         console.log(' =?  : ', this.cart.find(item => item.key === product.key));
         if (this.cart.find(item => item.key === product.key)) {
             this.cart.find(item => item.key === product.key).quantity += 1;
         } else {
-            console.log('false');
-
             this.cart.push(product);
             product.quantity = 1;
         }
         this.setCartData();
-        console.log('cart :', this.cart);
     }
 
     removeQuantity(product: Product) {
@@ -55,7 +46,6 @@ export class CartService {
         this.cart.splice(this.cart.indexOf(item), 1);
         this.setCartData();
     }
-
 
     calculateOrderPrice() {
         let result = 0;

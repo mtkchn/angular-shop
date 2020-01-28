@@ -15,6 +15,10 @@ p {
   color: #858585;
 }
 
+.invisible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 .productsContainer {
   margin: 85px 0 100px 0;
   display: grid;

@@ -1,11 +1,24 @@
 <header>
   <div class="headerContainer">
     <div class="container">
-      <div class="logoContainer">
-        <img id="mainLogo" routerLink="products" src="./assets/icons/header-logo.png" alt="logo">
-      </div>
+      <!-- <div class="logoContainer">
+        <img id="mainLogo" routerLink="/" src="" alt="logo">
+      </div> -->
+      <button id="mainLink" class="header-link" routerLink="/">Main page </button>
       <div class="contacts">
         <app-cart></app-cart>
+        <div class="auth-nav">
+          <button routerLink="/login" class="header-link auth-btn"
+            *ngIf="!this.authService.afAuth.auth.currentUser; else logIn">
+            Log in
+          </button>
+          <ng-template #logIn>
+            <button class="header-link auth-btn" routerLink="/admin"
+              *ngIf="this.authService.afAuth.auth.currentUser">Admin
+            </button>
+            <button (click)="logOut()" class="header-link auth-btn" color="primary">Log out</button>
+          </ng-template>
+        </div>
       </div>
     </div>
   </div>

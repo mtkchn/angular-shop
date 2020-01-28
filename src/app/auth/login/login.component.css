@@ -1,0 +1,33 @@
+.container {
+  font-family: "Roboto", sans-serif;
+
+}
+
+form {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  margin: 1rem;
+  text-align: center;
+}
+
+h1 {
+  margin: 2rem;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.login-btn {
+  margin-top: 1em;
+}
+
+.error-wrapper {
+  position: absolute;
+  top: 4.8em;
+  margin-bottom: .25em;
+  font-size: 75%;
+}

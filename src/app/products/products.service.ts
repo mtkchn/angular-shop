@@ -39,7 +39,7 @@ export class ProductsService {
     }
 
     public showToast(header: string, description: string) {
-        this.notificationManager.showToast(header, description, 17000);
+        this.notificationManager.showToast(header, description, 4000);
     }
 
     // getProducts() {

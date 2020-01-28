@@ -8,19 +8,18 @@ import { ADMIN_ROUTES } from './admin-page/admin-routing.module';
 import { ProductsComponent } from './products/products.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthGuard } from './auth-guard.service';
-import { AuthComponent } from './auth/auth.component';
-import { RegisterComponent } from './register/register.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { LoginComponent } from './auth/login/login.component';
 
 
 
 const ROUTES: Routes = [
-  { path: '', component: MainContentComponent },
-  { path: 'products', component: ProductsComponent },
+  { path: '', component: ProductsComponent },
   { path: 'product/:id', component: ProductPageComponent },
   { path: 'cart', component: CartPageComponent },
-  { path: 'login', component: AuthComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'admin', component: AdminPageComponent, children: ADMIN_ROUTES },
+  { path: 'admin', component: AdminPageComponent, canActivate: [AuthGuard], children: ADMIN_ROUTES },
   { path: '**', component: PageNotFoundComponent }
 
 ];

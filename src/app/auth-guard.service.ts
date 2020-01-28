@@ -6,13 +6,14 @@ import { Injectable } from '@angular/core';
 export class AuthGuard implements CanActivate {
     constructor(private auth: AuthService) { }
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-        return this.auth.isAuth().then((isLogedIn: boolean) => {
-            if (isLogedIn) {
-                return true;
-            } else {
-                return false;
-            }
-        });
+        console.log('USER :::: ', this.auth.afAuth.auth.currentUser);
+
+        if (this.auth.afAuth.auth.currentUser) {
+            return true;
+        } else {
+            return false;
+        }
+
 
     }
 }

@@ -1,4 +1,9 @@
 .counter {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  min-width: 8px;
+  padding: 0 4px;
   background-color: #ff5a00;
   border-radius: 8px;
   box-sizing: content-box;
@@ -7,16 +12,20 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;
-  min-width: 8px;
-  padding: 0 4px;
-  position: absolute;
-  left: calc(100% - 30px);
   text-align: center;
-  top: calc(100% - 30px);
 }
 
 .counterParant {
   position: relative;
+}
+
+.auth-btn {
+  margin-left: 3rem;
+}
+
+#iconContainer {
+  position: relative;
+  margin-bottom: 15px;
 }
 
 #cartIcon {
@@ -28,5 +37,4 @@
   -webkit-transition: 200ms;
   -webkit-transition-timing-function: ease-in-out;
   cursor: pointer;
-
 }

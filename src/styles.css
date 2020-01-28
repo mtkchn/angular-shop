@@ -163,8 +163,16 @@ html {
 }
 
 .container {
-  max-width: 80%;
+  max-width: 70%;
   margin: 0 auto;
+}
+
+.header-link {
+  font-size: 1rem;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  color: #fff;
 }
 
 @font-face {

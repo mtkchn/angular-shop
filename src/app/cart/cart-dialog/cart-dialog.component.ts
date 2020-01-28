@@ -10,11 +10,10 @@ import { CartService } from '../cart.service';
 })
 export class CartDialogComponent implements OnInit {
 
-
-
   ngOnInit() {
     this.changePosition();
   }
+
   constructor(
     public dialogRef: MatDialogRef<CartDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData, private cartService: CartService) { }

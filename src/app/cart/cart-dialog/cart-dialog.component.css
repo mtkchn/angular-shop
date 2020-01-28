@@ -14,8 +14,6 @@
   font-weight: bold;
 }
 
-.cartFooter {}
-
 .btn {
   margin: 6px;
 }
@@ -56,7 +54,6 @@
   height: 100px;
   margin-top: 1rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   justify-content: center;
   background-color: #fff;
@@ -84,6 +81,11 @@ img {
 }
 
 .counter {
+  position: absolute;
+  right: 0;
+  top: calc(100% - 16px);
+  min-width: 8px;
+  padding: 0 4px;
   background-color: #ff5a00;
   border-radius: 8px;
   box-sizing: content-box;
@@ -92,13 +94,8 @@ img {
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;
-  min-width: 8px;
-  padding: 0 4px;
-  position: absolute;
-  right: 0;
   text-align: center;
-  top: calc(100% - 16px);
-}
+  }
 
 .counterParant {
   position: relative;

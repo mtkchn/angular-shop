@@ -6,8 +6,8 @@ import { ProductsService } from '../products/products.service';
   templateUrl: './notification.component.html',
   styleUrls: ['./notification.component.css']
 })
-export class NotificationComponent implements OnInit {
 
+export class NotificationComponent implements OnInit {
   public index: number;
   public selfRef: NotificationComponent;
 

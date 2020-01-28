@@ -8,8 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { MainContentComponent } from './main-content/main-content.component';
 import { FooterComponent } from './footer/footer.component';
-import { SliderComponent } from './slider/slider.component';
-import { SlideComponent } from './slider/slide/slide.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
 import { CartItemComponent } from './cart/cart-item/cart-item.component';
@@ -34,9 +32,9 @@ import { CartDialogComponent } from './cart/cart-dialog/cart-dialog.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth-guard.service';
-import { AuthComponent } from './auth/auth.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { RegisterComponent } from './register/register.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { LoginComponent } from './auth/login/login.component';
 // import { DynamicModalPageModule } from "./dynamicModalPage/dynamicModalPage.module";
 @NgModule({
   declarations: [
@@ -44,8 +42,6 @@ import { RegisterComponent } from './register/register.component';
     HeaderComponent,
     MainContentComponent,
     FooterComponent,
-    SliderComponent,
-    SlideComponent,
     CartComponent,
     CartItemComponent,
     ProductsComponent,
@@ -56,8 +52,8 @@ import { RegisterComponent } from './register/register.component';
     EditItemComponent,
     CartDialogComponent,
     PageNotFoundComponent,
-    AuthComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
 
   ],
   imports: [

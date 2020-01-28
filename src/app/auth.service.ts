@@ -29,6 +29,7 @@ export class AuthService {
         return new Promise<any>((resolve, reject) => {
             this.afAuth.auth.signInWithEmailAndPassword(value.email, value.password)
                 .then(res => {
+                    console.log('user : ', this.afAuth.auth.currentUser);
                     resolve(res);
                 }, err => reject(err));
         });
