@@ -19,7 +19,7 @@ The following are needed to install:
 
 To install, clone the repository by running the following command:
 
-	git clone https://github.com/colknives/angular-shop.git
+	git clone https://github.com/mtkchn/angular-shop.git
 
 Next, within the 'angular-shop' folder run the following command in terminal to install all node modules
 
