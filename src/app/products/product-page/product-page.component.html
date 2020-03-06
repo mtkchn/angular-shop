@@ -1,15 +1,16 @@
-<div *ngIf="item$ | async as item" class="container">
+<div *ngIf="item$ | async as item">
+  <div class="container">
+    <img [src]="item.imgUrl" alt="productImg">
+    <div id="aboutProduct">
+      <h3>{{item.title}}</h3>
+      <p id="materials">{{item.materials}}</p>
 
-  <img [src]="item.imgUrl" alt="productImg">
-  <div id="aboutProduct">
-    <h3>{{item.title}}</h3>
-    <p id="materials">{{item.materials}}</p>
-
-    <p class="productDescription">{{item.description}}</p>
-    <div class="gradient"></div>
-    <span id="price">{{item.price | currency:'USD'}}</span>
-    <button id="addBtn" mat-raised-button
-      (click)="this.cartService.addTocart(item); this.ps.showToast(item.title + ' added to cart' , item.materials)">
-      Add to cart</button>
+      <p class="productDescription">{{item.description}}</p>
+      <div class="gradient"></div>
+      <span id="price">{{item.price | currency:'USD'}}</span>
+      <button id="addBtn" mat-raised-button
+        (click)="this.cartService.addTocart(item); this.ps.showToast(item.title + ' added to cart' , item.materials)">
+        Add to cart</button>
+    </div>
   </div>
 </div>

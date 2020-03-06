@@ -23,7 +23,6 @@ export class CartService {
     }
 
     addTocart(product: Product) {
-        console.log(' =?  : ', this.cart.find(item => item.key === product.key));
         if (this.cart.find(item => item.key === product.key)) {
             this.cart.find(item => item.key === product.key).quantity += 1;
         } else {

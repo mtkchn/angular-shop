@@ -1,18 +1,16 @@
 .container {
   padding-top: 2rem;
   display: flex;
+
 }
 
 #aboutProduct {
-  margin-left: 4rem;
+  margin: 0 0 4rem 4rem;
   width: 40%;
   font-family: 'Roboto';
 }
 
 img {
-  /* position: absolute;
-  z-index: 9999; */
-  /* top: 0; */
   height: 70vh;
 }
 
@@ -50,4 +48,38 @@ h3 {
 #addBtn {
   background-color: black !important;
   color: #fff;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  .container {
+    flex-direction: column;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  #aboutProduct {
+    margin: 0 auto 4rem auto;
+    width: 100%;
+  }
+
+  h3,
+  #aboutProduct,
+  #materials,
+  .productDescription {
+    width: 100%;
+
+  }
+
+  h3 {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  #addBtn {
+    width: 100%;
+  }
+
+
 }

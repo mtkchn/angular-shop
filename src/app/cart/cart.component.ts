@@ -20,7 +20,6 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
     localStorage.setItem('myCat', 'Tom');
-    console.log('getCartData ::::::> ', this.cartService.getCartData());
   }
 
   openDialog(): void {

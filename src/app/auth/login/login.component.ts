@@ -21,8 +21,6 @@ export class LoginComponent {
   loginForm: FormGroup;
   errorMessage = '';
 
-
-
   createForm() {
     this.loginForm = this.fb.group({
       email: ['', Validators.required],
@@ -34,10 +32,8 @@ export class LoginComponent {
   tryLogin(value) {
     this.authService.doLogin(value)
       .then(res => {
-        console.log('login : ', res);
         this.router.navigate(['/admin']);
       }, err => {
-        console.log(err);
         this.errorMessage = err.message;
       });
   }

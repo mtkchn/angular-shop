@@ -163,7 +163,7 @@ html {
 }
 
 .container {
-  max-width: 70%;
+  max-width: 80%;
   margin: 0 auto;
 }
 
@@ -173,6 +173,13 @@ html {
   border: none;
   cursor: pointer;
   color: #fff;
+}
+
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  .container {
+    max-width: 94%;
+  }
 }
 
 @font-face {
